@@ -160,6 +160,16 @@ h2 {
   font-size: 16px;
 }
 
+.project a {
+  color: #0073e6;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.project a:hover {
+  color: #e0e0e0;
+}
+
 .contact-container {
   text-align: center;
   margin-top: 20px;
