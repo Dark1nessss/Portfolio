@@ -8,6 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// Initialize Particles.js
+particlesJS.load('particles-js', 'particles.json', function() {
+  console.log('particles.js loaded - callback');
+});
+
 // Navbar scroll animation
 window.addEventListener('scroll', function() {
   const navbar = document.getElementById('navbar');
