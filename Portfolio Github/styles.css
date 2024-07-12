@@ -147,12 +147,6 @@ h2 {
   animation: fadeInUp 1s ease-in-out;
 }
 
-.about-image {
-  margin: 20px;
-  width: 30%;
-  border-radius: 8px;
-}
-
 .project-list {
   display: flex;
   flex-wrap: wrap;
@@ -167,13 +161,14 @@ h2 {
   border-radius: 8px;
   width: 100%;
   max-width: 400px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
   position: relative;
 }
 
 .project:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background-color: #2a2a2a;
 }
 
 .project h3 {
@@ -217,6 +212,49 @@ h2 {
 
 .contact-container a .fa-envelope {
   font-size: 36px;
+}
+
+form {
+  margin: 20px 0;
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+  border-color: #0073e6;
+  box-shadow: 0 0 8px rgba(0, 115, 230, 0.5);
+  outline: none;
+}
+
+form textarea {
+  resize: none;
+}
+
+form button {
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  max-width: 600px;
+}
+
+form button:hover {
+  background-color: #005bb5;
 }
 
 p {
