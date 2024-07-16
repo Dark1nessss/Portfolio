@@ -3,63 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Portfolio </title>
-
-    <!-- Styles para texto -->
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-
-    <!-- Extra CSS-->
+    <title>Dmytro Bohutskyy - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="styles.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
-    <!-- Header/Navbar -->
-    <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-
-        <i class='bx bx-menu' id="menu-icon"></i>
-
-        <nav class="navbar">
-            <a href="index.html" class="active">Home</a>
-        </nav>  
-        
-    </header>
-
-<!-- Secção Homepage-->
-<section class="home" id="home">
-    <div class="home-content">
-
-<div class='console-container'><span id='text'></span>
-
-    <div class='console-underscore' id='console'>&#95;</div>
-
-</div>
-        <span class="multiple-text"></span>
-        <p>Welcome to my portfolio! You are welcome to stay as much as you want, please also see my expirences down below!</p>
-    <div class="social-media">
-        <a href="https://github.com/Dark1nessss"><i class='bx bxl-meta'></i></a>
-        <a href="https://www.linkedin.com/in/dmytro-bohutskyy-723941268/"><i class='bx bxl-linkedin' ></i></a>
+    <div id="particles-js"></div>
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#home">Portfolio</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
 
-</section> 
+    <section id="home" data-aos="fade-up">
+        <div class="intro-container">
+            <div class='console-container'>
+                <span id='text'></span>
+                <div class='console-underscore' id='console'>&#95;</div>
+            </div>
+        </div>
+    </section>
 
-<div class="main">
-    <h2>ERROR<span></span><span></span></h2>
-    <h1>Languages: <div class="roller">
-      <span id="rolltext">
-      HTML<br/>
-      CSS<br/>
-      C++<br/>
-      <span id="spare-time">Studying...</span><br/>
-      </div>
-      </h1>
-      
-    </div>
-    
-    <!-- Custom js-->
-    <script src="script.js"></script> 
-    </body>
+    <section id="about" data-aos="fade-up">
+        <h2>About Me</h2>
+        <div class="about-container">
+            <p>Hi, I'm Dmytro Bohutskyy, a passionate full-stack developer specializing in frontend development with HTML and CSS. I'm currently learning Bootstrap and React.</p>
+            <p>My journey as a developer started when I was 16, experimenting with languages such as C++ & Visual Basic. Over the years, I have honed my skills in multiple programming languages and frameworks, constantly striving to learn and adapt to new challenges.</p>
+            <p>While I don't often work in open source or seek help frequently, I am a good team worker. I enjoy collaborating with other developers time to time to create amazing software.</p>
+            <p>When I'm not coding, you can find me playing video games, basketball, or exploring new places.</p>
+        </div>
+    </section>
 
+    <section id="projects" data-aos="fade-up">
+        <h2>Projects</h2>
+        <div id="project-list" class="project-list">
+            <!-- GitHub projects will be dynamically inserted here -->
+        </div>
+    </section>
+
+    <section id="contact" data-aos="fade-up">
+        <h2>Contact</h2>
+        <div class="contact-container">
+            <a href="https://github.com/Dark1nessss" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/dmytro-bohutskyy-723941268/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:frankhorn99@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <form action="mailto:frankhorn99@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <p>Feel free to reach out to me through any of the platforms above. I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
+    </section>
+</body>
 </html>
